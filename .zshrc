@@ -85,11 +85,14 @@ swapCtrAlt(){
 
 # xmodmap -e "keycode 112 = Home" -e "keycode 117 = End"
 # xmodmap -e "pointer = 1 2 3 5 4 6 7 8 9 10 11 12"
+setUpNaturalScrolling(){
+  export mouseId = xinput list | grep "MX Master" | grep -oP 'id=\K\d+'
+  xinput set-prop $mouseId 334 -1 -1 -1
+}
 
 setupXModMap(){
   swapCtrAlt
   xmodmap -e "keycode 112 = Home" -e "keycode 117 = End"
-  # xmodmap -e "pointer = 1 2 3 5 4 6 7 8 9 10 11 12"
 }
 # xmodmap ~/.xmodmap230616
 
