@@ -75,26 +75,22 @@ alias vintraceServerStart=$JBOSS_HOME/bin/standalone.sh -Djboss.bind.address=0.0
 # docker start $mysqlcontainer &
 # docker run  --memory="4g" --memory-swap="10g" $mysqlcontainer &
 
-
-
-
 swapCtrAlt(){
   xmodmap -e "remove mod1 = Alt_L" -e "remove control = Control_L" -e "keysym Control_L = Alt_L" -e "keysym Alt_L = Control_L" -e "add mod1 = Alt_L" -e "add control = Control_L"
 }
 
-
-# xmodmap -e "keycode 112 = Home" -e "keycode 117 = End"
-# xmodmap -e "pointer = 1 2 3 5 4 6 7 8 9 10 11 12"
 setUpNaturalScrolling(){
-  export mouseId = xinput list | grep "MX Master" | grep -oP 'id=\K\d+'
+  mouseId=$(xinput list | grep "MX Master" | grep -oP 'id=\K\d+')
   xinput set-prop $mouseId 334 -1 -1 -1
 }
 
 setupXModMap(){
   swapCtrAlt
   xmodmap -e "keycode 112 = Home" -e "keycode 117 = End"
+  setUpNaturalScrolling
 }
-# xmodmap ~/.xmodmap230616
+
+
 
 
 
