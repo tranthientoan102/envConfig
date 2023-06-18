@@ -1,0 +1,16 @@
+import:
+ - ~/.config/alacritty/themes/themes/tokyo-night-storm.yaml
+font:
+  normal:
+    family: 'Operator Mono Medium'
+  size: 10
+
+live_config_reload: true
+
+selection:
+  save_to_clipboard: true
+
+key_bindings:
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Control, action: Copy }
+  - { key: C, mods: Control|Shift, chars: "\x03" }
