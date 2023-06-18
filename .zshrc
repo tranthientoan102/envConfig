@@ -86,7 +86,7 @@ setUpNaturalScrolling(){
 
 setupXModMap(){
   swapCtrAlt
-  xmodmap -e "keycode 112 = Home" -e "keycode 117 = End"
+  xmodmap -e "keycode 112 = Home" -e "keycode 117 = End" -e "keycode 119 = Print"
   setUpNaturalScrolling
 }
 
