@@ -244,4 +244,4 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id swapCtrAlt
 exec --no-startup-id xmodmap -e "keycode 112 = Home" -e "keycode 117 = End"
-exec --no-startup-id xinput set-prop 23 334 -1 -1 -1
+exec --no-startup-id setUpNaturalScrolling
