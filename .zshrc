@@ -75,8 +75,17 @@ alias vintraceServerStart=$JBOSS_HOME/bin/standalone.sh -Djboss.bind.address=0.0
 # docker start $mysqlcontainer &
 # docker run  --memory="4g" --memory-swap="10g" $mysqlcontainer &
 
-swapCtrAlt(){
-  xmodmap -e "remove mod1 = Alt_L" -e "remove control = Control_L" -e "keysym Control_L = Alt_L" -e "keysym Alt_L = Control_L" -e "add mod1 = Alt_L" -e "add control = Control_L"
+swapCtrlAlt(){
+  keymap=$(xmodmap -pm)
+
+  # Check if the keymap already contains the Ctrl-Alt swap
+  if grep -q "Control_L (0xcc)" <<< "$keymap"; then
+    echo "Ctrl and Alt are already swapped"
+  else
+    xmodmap -e "remove mod1 = Alt_L" -e "remove control = Control_L" -e "keysym Control_L = Alt_L" -e "keysym Alt_L = Control_L" -e "add mod1 = Alt_L" -e "add control = Control_L"
+    export swappedCtrAlt=$((swappedCtrAlt+1))
+    echo "swapped Ctrl <-> Alt"
+  fi
 }
 
 setUpNaturalScrolling(){
@@ -85,7 +94,7 @@ setUpNaturalScrolling(){
 }
 
 setupXModMap(){
-  swapCtrAlt
+  swapCtrlAlt
   xmodmap -e "keycode 112 = Home" -e "keycode 117 = End" -e "keycode 119 = Print"
   setUpNaturalScrolling
 }
