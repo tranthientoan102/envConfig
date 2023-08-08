@@ -95,16 +95,17 @@ setUpNaturalScrolling(){
 
 setupXModMap(){
   swapCtrlAlt
-  xmodmap -e "keycode 112 = Home" -e "keycode 117 = End" -e "keycode 119 = Print"
+  xmodmap -e "keycode 112 = Home" -e "keycode 117 = End" -e "keycode 119 = Print" -e "keycode 127 = Delete"
   setUpNaturalScrolling
 }
-
-
-
-
+setupXModMap
 
 runScreenKey(){
   pgrep screenkey || screenkey -s medium --opacity 0.5  --scr 2 &
+}
+
+loadI3Layout_working(){
+  i3-msg "workspace 2; append_layout ~/.i3/workspace-2.json; exec alacritty;exec alacritty;exec alacritty; exec code; exec $IDEA; exec calibre; exec google-chrome-stable;"
 }
 
 xset s off
