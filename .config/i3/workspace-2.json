@@ -1,0 +1,197 @@
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "marks": [],
+            "percent": 0.166666666666667,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "user_off",
+                    "geometry": {
+                       "height": 600,
+                       "width": 800,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "htop",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       "class": "^Alacritty$",
+                       "instance": "^Alacritty$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 600,
+                       "width": 800,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "i3-save-tree --workspace 2 > ~/.i3/workspace-2.json",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       "class": "^Alacritty$",
+                       "instance": "^Alacritty$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 600,
+                       "width": 800,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "tom@envy15:~",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       "class": "^Alacritty$",
+                       "instance": "^Alacritty$",
+                       "machine": "^envy15$",
+                       "title": "^tom\\@envy15\\:\\~$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.258309037900875,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "floating": "auto_off",
+                    "layout": "splitv",
+                    "marks": [],
+                    "percent": 1,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "pixel",
+                            "current_border_width": 3,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 1331,
+                               "width": 2544,
+                               "x": 874,
+                               "y": 87
+                            },
+                            "marks": [],
+                            "name": "workspace-2.json - Code - OSS",
+                            "percent": 1,
+                            "swallows": [
+                               {
+                               "class": "^code\\-oss$",
+                               "instance": "^code\\-oss$"
+                               }
+                            ],
+                            "type": "con"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "stacked",
+            "marks": [],
+            "percent": 0.575024295432459,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 994,
+                       "width": 1876,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "(5) I want to auto load my workspace... : i3wm — Mozilla Firefox",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       "class": "^Google-chrome$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1231,
+                       "width": 3380,
+                       "x": 25,
+                       "y": 154
+                    },
+                    "marks": [],
+                    "name": "vintrace-server [~/Documents/vintrace/repos/vintrace-server] – …/ejb/ejbModule/com/jx2/wms/processes/collectors/ResurrectInfoCollector.java [vintrace-ejb]", 
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                        "class": "^jetbrains\\-idea$"
+                    }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 960,
+                       "width": 1146,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       "class": "^calibre$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+
