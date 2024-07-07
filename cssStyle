@@ -1,0 +1,33 @@
+*:not(i ,mat-icon, title, h1,h2,h3
+/* ,h4,h5,h6 */
+, [class*="icon"]
+, b, strong, span.ListMarker, .google-symbols, .docon
+){
+  font-family:"Cascadia Mono",'Short Stack',"Cascadia Mono","Font Awesome 5 Free","Glyphicons Halflings";
+  /* font-weight: 600; */
+}
+
+
+.subh6, span.buttons, .path
+,b, strong
+,title, h1,h2,h3
+/* ,h4,h5,h6  */
+{
+  font-family:  "Courier Prime",'Black Ops One','Ubuntu Sans Mono';
+  font-weight: 600;
+  /* font-style: italic; */
+}
+
+.subh6, span.buttons, .path
+,b, strong {
+  font-size: 1.2em;
+}
+
+b, strong {
+
+  color: #386b3a;
+}
+
+.epBmH {
+  background: lightsalmon;
+}
