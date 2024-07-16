@@ -1,0 +1,7 @@
+modmap:
+- name: swap Ctrl <> Alt
+  remap:
+    CTRL_L: ALT_L
+    ALT_L: CTRL_L
+    PageUp: Home
+    PageDown: End
