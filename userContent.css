@@ -1,0 +1,217 @@
+/* SPDX-License-Identifier: MPL-2.0 */
+/* SPDX-FileCopyrightText: 2024 awwpotato */
+
+@import url("vars.css");
+@import url("content/sidebery.css");
+@import url("content/about.css");
+
+/* pdf viewer */
+[mozdisallowselectionprint] > body {
+  & #mainContainer {
+    & .toolbar {
+      padding: 4px !important;
+      padding-bottom: none !important;
+      & #toolbarContainer {
+        border-radius: var(--uc-radius) !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+
+/*******************************
+all website
+*******************************/
+input
+{
+    caret: bar;
+    border-bottom: 2px solid skyblue;
+}
+
+
+*:not(i, mat-icon, title, h1, h2,h3, h4, h1 a, h2 a,h3 a, h4 a, h1 span, h2 span ,h3 span, h4 span
+/* ,h4,h5,h6 */
+, [class*="icon"], [data-icon-name], [class="RGSb/1c4ex9CM0as0oaLQA=="], [class*="i4 bf hs ht"] 
+, [class*="st-emotion-cache"] 
+, [class*="hao lpl-10"]
+, [class*="icon"]
+, .nav-rail__icon
+, blockquote, blockquote p
+, [class="conf-macro output-block output-inline"]
+, svg, svg g, svg g div, svg path
+, b, strong
+, span.ListMarker, .google-symbols, .docon, span.touch, span.icon
+, .price, .price-decimal, .currency-symbol
+, .numhead-number, .font-bold
+, .TtcXM
+){
+
+  font-family: "MartianMono NFM" !important;
+  font-size: clamp(16px, calc(125% * 1em), 24px);
+  line-height: calc(125% * 1em);
+}
+
+
+.subh6, .spanbuttons, .path
+, b, strong
+,title, h1, h2,h3, h4, h1 a, h2 a,h3 a, h4 a, h1 span, h2 span ,h3 span, h4 span
+, .numhead-number, .font-bold
+, .TtcXM
+{
+  font-family: "Winter Lemon", "DynaPuff", "Exo 2", "Hepta Slab",  "Cascadia Mono", "MartianMono NFM", "Space Mono" , Sigmar, "Space Mono", "Caprasimo", "Coiny", "DynaPuff" !important;
+  font-size: clamp(24px, 150% * 1em, 40px); 
+  line-height: calc(150% * 1em);
+  font-weight: 100;
+  /* font-style: ; */
+}
+
+/* h1, h1 a,h2,h3,h4,h5,h6 {
+  color: #0049b0;
+} */
+
+b, strong {
+  font-weight: 400;
+  /* font-size: 1em; */
+  /* font-family: Sigmar; */
+  /* padding: 5px;
+
+
+  margin-right: 2px;
+  background: yellow !important;
+  color: black !important; */
+
+
+}
+
+
+
+
+.epBmH {
+  background: lightsalmon;
+}
+.i4 .bf .hs .ht {
+  overflow: hidden;
+}
+
+
+/********medium.com************/
+
+div.fc {
+  max-width: 100vh;
+}
+
+/********snowflake************/
+
+[class*="ld f2 jr mr f4 q6             b3 en b5 d5 gk f0 q7 lp"] {
+/* padding-right: 10px;
+margin-right: 10px; */
+/* overflow: hidden; */
+}
+
+[class*="ld f2 jr mr f4 q9             b3 en b5 d5 gk f0 qa lp"], [class="lb f2 ji n5 f4 r6             b3 en b5 d5 gk f0 r7 lo"]{
+padding-left: 15px;
+margin-left: 15px;
+/* padding-right: 12px;
+margin-right: 12px; */
+box-sizing: content-box;
+/* overflow: visible; */
+
+}
+
+
+@-moz-document domain(confluence.pathology.health.nsw.gov.au) {
+    
+  ._4t3i1d82 , #main-header {
+    border-bottom: solid 3px #000000AA;
+  }
+
+  #title-text {
+    display: block;
+    
+  }
+
+  .plugin_pagetree_current, .plugin_pagetree_current>a{
+    background: #0049b0 !important;
+    color: white !important;
+  }
+
+
+  /* title,h1, h1 a,h2,h3,h4,h5,h6 {
+    font-family: 'Lilita One','Elephant','Paytone One','Broadway','Titan One','Stencil','Black Ops One';
+    color: #0049b0;
+  } */
+
+
+
+
+
+  h1::before, h2::before, h3::before, h4::before, h5::before, h6::before{
+    display: inline;
+    padding: 0px 5px;
+    margin-right: 2px;
+    background: gray;
+    color: white;
+    font-family: 'Lilita One', "MartianMono NFM"
+
+  }
+  h1::before{
+    content: "H1";
+  }
+  h2::before{
+    content: "H2";
+  }
+  h3::before{
+    content: "H3";
+  }
+  h4::before{
+    content: "H4";
+  }
+  h5::before{
+    content: "H5";
+  }
+  h6::before{
+    content: "H6";
+  }
+
+  .expand-container {
+    border: 3px solid goldenrod; /* 2px border width, solid black color */
+  }
+
+  .expand-container + .expand-container {
+    border-top: 0px;
+  }
+  td.code, .confluenceTable {
+    border: 3px solid black;
+  }
+
+}
+
+@-moz-document domain(portal.azure.com) {
+  div.fxs-avatarmenu-tenant {
+    text-decoration: none;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  div.fxc-gc-columnheader-content.fxc-gc-text {
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  h3.fxs-home-title {
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  h2.fxs-blade-title-titleText.msportalfx-tooltip-overflow {
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  h3.fxc-monitorchartv2-title.msportalfx-tooltip-overflow {
+    font-weight: 500;
+    font-style: normal;
+  }
+
+}
