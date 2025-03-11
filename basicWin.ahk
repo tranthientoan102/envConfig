@@ -23,9 +23,42 @@ LAlt::LCtrl
 PgUp::Home
 PgDn::End
 Pause::Delete
-Delete::Pause
+;Delete::Pause
+
+;---------------------------
 
 
+CapsLock::
+    if toggle := !toggle
+        SplashImage,,% "X" A_ScreenWidth/2 " Y50 B0 FM20 CTFFFFFF CW000000",, hit capslock - FN:ON
+    else
+        SplashImage, off
+        Loop, 0xFF
+        ; release all key
+        IF GetKeyState(Key:=Format("VK{:X}",A_Index))
+            SendInput, {%Key% up}
+return
+
+#if toggle
+Esc::`
++Esc::Send ~
+1::Send {F1}
+2::Send {F2}
+3::Send {F3}
+4::Send {F4}
+5::Send {F5}
+6::Send {F6}
+7::Send {F7}
+8::Send {F8}
+9::Send {F9}
+0::Send {F10}
+-::Send {F11}
+=::Send {F12}
+
+#if
+
+
+;-------------------------------
 
 
 
@@ -41,7 +74,7 @@ DisplayMenu(){
     Send {LCtrl up}
     
     list := ""
-    Menu, windows, Add
+    Menu, windows, Add  
     Menu, windows, deleteAll
     WinGet, id, list
     Loop, %id%
@@ -92,28 +125,65 @@ IsWindow(hWnd){
     }
     return true
 }
+;------------------------------------
+;------------------------------------
 
 
 
+; Define hotkey Alt + `
+; Alt + ` (backtick) will trigger the menu
+!`::
+{
+    Menu, SubMenuU, Add, Email, SendUser
+    Menu, SubMenuU, Add, StaffID, SendStaffID 
 
-!1:: SendUser()
-!2:: SendStaffID()
-!`:: SendPassword()
+    Menu, SubMenuP, Add, Stafflink, SendPassword
+    Menu, SubMenuP, Add, GitHealth, SendGitHealthToken
+
+    Menu, SubMenuCombo, Add, Login, SendUPLogin
+    Menu, SubMenuCombo, Add, Login with Enter, SendUPLogin_enter
+
+
+
+    Menu, MyMenu, Add, U, :SubMenuU   ; Add 'u' as a main menu item
+    Menu, MyMenu, Add, P, :SubMenuP   ; Add 'p' as a main menu item;
+    Menu, MyMenu, Add
+    Menu, MyMenu, Add, Combo, :SubMenuCombo
+
+    Menu, MyMenu, Show
+
+    Send {LAlt up}
+    Send {LAlt up}
+    Send {LAlt up}
+
+}
+
+
 
 
 SendUser(){
     Send thientoan.tran@health.nsw.gov.au
-    return True
 }
 
 SendStaffID(){
     Send 60345241
-    return True
 }
 
 
 
+SendUPLogin(){
+    SendStaffID()
+    Send {Tab}
+    SendPassword()
+    Send {Enter}
 
+}
 
+SendUPLogin_enter(){
+    SendStaffID()
+    Send {Enter}
+    Sleep, 1000
+    SendPassword()
+    Send {Enter}
 
-
+}
