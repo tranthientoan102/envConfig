@@ -23,11 +23,23 @@
 /*******************************
 all website
 *******************************/
-input
+/* input
 {
     caret: bar;
     border-bottom: 2px solid skyblue;
+} */
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
 }
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
 
 
 *:not(i, mat-icon, title, h1, h2,h3, h4, h1 a, h2 a,h3 a, h4 a, h1 span, h2 span ,h3 span, h4 span
@@ -35,60 +47,83 @@ input
 , [class*="icon"], [data-icon-name], [class="RGSb/1c4ex9CM0as0oaLQA=="], [class*="i4 bf hs ht"] 
 , [class*="st-emotion-cache"] 
 , [class*="hao lpl-10"]
-, [class*="icon"]
+, [class*="icon"], [class*="symbol"]
 , .nav-rail__icon
 , blockquote, blockquote p
 , [class="conf-macro output-block output-inline"]
 , svg, svg g, svg g div, svg path
-, b, strong
+, b, strong, em
+, [class*="bold"], [class*="strong"]
 , span.ListMarker, .google-symbols, .docon, span.touch, span.icon
 , .price, .price-decimal, .currency-symbol
 , .numhead-number, .font-bold
 , .TtcXM
 ){
-
+  /* font-family: "Space Mono"  !important; */
   font-family: "MartianMono NFM" !important;
-  font-size: clamp(16px, calc(125% * 1em), 24px);
-  line-height: calc(125% * 1em);
+  /* font-size: clamp(16px, 1.25em, 24px); */
+  /* font-size: 1.25em !important;
+  line-height: 1.25em !important; */
+  /* font-weight: 100 !important; */
 }
 
 
 .subh6, .spanbuttons, .path
-, b, strong
+/* , b, strong, em */
 ,title, h1, h2,h3, h4, h1 a, h2 a,h3 a, h4 a, h1 span, h2 span ,h3 span, h4 span
 , .numhead-number, .font-bold
 , .TtcXM
 {
-  font-family: "Winter Lemon", "DynaPuff", "Exo 2", "Hepta Slab",  "Cascadia Mono", "MartianMono NFM", "Space Mono" , Sigmar, "Space Mono", "Caprasimo", "Coiny", "DynaPuff" !important;
-  font-size: clamp(24px, 150% * 1em, 40px); 
-  line-height: calc(150% * 1em);
-  font-weight: 100;
-  /* font-style: ; */
-}
-
-/* h1, h1 a,h2,h3,h4,h5,h6 {
-  color: #0049b0;
-} */
-
-b, strong {
-  font-weight: 400;
-  /* font-size: 1em; */
-  /* font-family: Sigmar; */
-  /* padding: 5px;
+  /* font-family: "MartianMono NFM" !important; */
+  font-family:  "DM Mono" , "Satisfy", "Shantell Sans", "DM Mono" , "Space Mono" !important;
+  /* font-family: "Space Mono" , "Winter Lemon", "DynaPuff", "Exo 2", "Hepta Slab",  "Cascadia Mono", "MartianMono NFM", Sigmar, "Space Mono", "Caprasimo", "Coiny", "DynaPuff" !important; */
+  font-style: italic !important;
+  /* font-size: clamp(20px, 1.25em, 40px) !important;  */
+  /* line-height: calc(1.25em) !important; */
+  font-weight: 400 !important;
+  font-variant-ligatures: additional-ligatures !important;
 
 
-  margin-right: 2px;
-  background: yellow !important;
-  color: black !important; */
-
+  border-radius: 6px !important;
+  padding: 3px 8px !important;
 
 }
 
 
+b, b span, strong, strong span, em, em span 
+, [class*="bold"], [class*="strong"]
+
+{
+  font-family:  "DM Mono" ,"Satisfy", "Shantell Sans", "DM Mono" , "Space Mono" !important;
+  font-size:1.25em !important; 
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-variant-ligatures: additional-ligatures !important;
+
+
+	/* background: linear-gradient(to right, #fc466b, #3f5efb , #fc466b  ) ; */
+	/* background-image: linear-gradient(to right, #350068, #FF6978, #350068 ); */
+	background-image: linear-gradient(to right, #DA3068, #14469F, #DA3068 );
+	-webkit-background-clip: text;
+	background-repeat: repeat-x; 
+	background-size: 200% auto;
+  /* color: white !important; */
+	color: transparent ;
+	animation: moveGradient 5s linear infinite;
+  
+	/* border-radius: .5em !important; */
+  padding: 3px 8px !important;
+}
+
+@keyframes moveGradient {
+  0% { background-position: 0% center; }
+  /* 50% { background-position: -100% center; } */
+  100% { background-position: -200% center; }
+}
 
 
 .epBmH {
-  background: lightsalmon;
+  background: lightsalmon !important;
 }
 .i4 .bf .hs .ht {
   overflow: hidden;
@@ -97,8 +132,8 @@ b, strong {
 
 /********medium.com************/
 
-div.fc {
-  max-width: 100vh;
+div .fc {
+  max-width: 100vh !important;
 }
 
 /********snowflake************/
