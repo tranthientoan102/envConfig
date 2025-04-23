@@ -32,7 +32,7 @@ all website
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
-  width: 7px;
+  width: 10px;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
@@ -42,12 +42,15 @@ all website
 
 
 
-*:not(i, mat-icon, title, h1, h2,h3, h4, h1 a, h2 a,h3 a, h4 a, h1 span, h2 span ,h3 span, h4 span
-/* ,h4,h5,h6 */
+*:not(i, mat-icon, title
+, h1, h2, h3, h4, h5, h6
+, h1 a, h2 a,h3 a, h4 a, h1 span, h2 span ,h3 span, h4 span
 , [class*="icon"], [data-icon-name], [class="RGSb/1c4ex9CM0as0oaLQA=="], [class*="i4 bf hs ht"] 
 , [class*="st-emotion-cache"] 
 , [class*="hao lpl-10"]
 , [class*="icon"], [class*="symbol"]
+, .important
+, gf-load-icon-font
 , .nav-rail__icon
 , blockquote, blockquote p
 , [class="conf-macro output-block output-inline"]
@@ -58,58 +61,65 @@ all website
 , .price, .price-decimal, .currency-symbol
 , .numhead-number, .font-bold
 , .TtcXM
+, gf-content-editable.variant__content-editable
+, div _ngcontent-ng-c804862923
+, .tile__text
 ){
-  /* font-family: "Space Mono"  !important; */
-  font-family: "MartianMono NFM" !important;
-  /* font-size: clamp(16px, 1.25em, 24px); */
-  /* font-size: 1.25em !important;
-  line-height: 1.25em !important; */
-  /* font-weight: 100 !important; */
+  font-family: "Martian Mono","Google Symbols", FabricMDL2Icons, "Material Symbols Outlined" !important;
 }
 
-
-.subh6, .spanbuttons, .path
-/* , b, strong, em */
-,title, h1, h2,h3, h4, h1 a, h2 a,h3 a, h4 a, h1 span, h2 span ,h3 span, h4 span
+b, strong, em
+, [class*="bold"], [class*="strong"]
+,.subh6, .spanbuttons, .path
+,title
+, h1, h2,h3, h4, h5, h6
 , .numhead-number, .font-bold
 , .TtcXM
+, .important
+
 {
   /* font-family: "MartianMono NFM" !important; */
-  font-family:  "DM Mono" , "Satisfy", "Shantell Sans", "DM Mono" , "Space Mono" !important;
-  /* font-family: "Space Mono" , "Winter Lemon", "DynaPuff", "Exo 2", "Hepta Slab",  "Cascadia Mono", "MartianMono NFM", Sigmar, "Space Mono", "Caprasimo", "Coiny", "DynaPuff" !important; */
+  font-family: "DM Mono" , "Satisfy", "Shantell Sans", "DM Mono" , "Space Mono" !important;
+  font-size: clamp(20px, 1.1em, 1.5rem) !important; 
   font-style: italic !important;
-  /* font-size: clamp(20px, 1.25em, 40px) !important;  */
-  /* line-height: calc(1.25em) !important; */
   font-weight: 400 !important;
-  font-variant-ligatures: additional-ligatures !important;
-
-
-  border-radius: 6px !important;
-  padding: 3px 8px !important;
 
 }
 
 
-b, b span, strong, strong span, em, em span 
-, [class*="bold"], [class*="strong"]
-
+b:not(:has(*)), strong:not(:has(*)), em:not(:has(*))
+/* , h1:not(:has(span)), h2:not(:has(span)), h3:not(:has(span)), h4:not(:has(span)), h5:not(:has(span)), h6:not(:has(span)) */
+,h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty
+, [class*="bold"]:not(:has(*))
+, [class*="strong"]:not(:has(*))
+, .numhead-number, .font-bold
+, .TtcXM
+, .important
 {
-  font-family:  "DM Mono" ,"Satisfy", "Shantell Sans", "DM Mono" , "Space Mono" !important;
-  font-size:1.25em !important; 
+  /* font-family:  "DM Mono" ,"Satisfy", "Shantell Sans", "DM Mono" , "Space Mono" !important;
+  font-size: clamp(20px, 1.1em, 1.5rem) !important; 
   font-style: italic !important;
-  font-weight: 400 !important;
-  font-variant-ligatures: additional-ligatures !important;
+  font-weight: 400 !important; */
 
 
 	/* background: linear-gradient(to right, #fc466b, #3f5efb , #fc466b  ) ; */
 	/* background-image: linear-gradient(to right, #350068, #FF6978, #350068 ); */
-	background-image: linear-gradient(to right, #DA3068, #14469F, #DA3068 );
+	background-image: linear-gradient(to right, #DA3068, #14469F, #DA3068 ) !important;
+	/* background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); */
+	background-size: 800% 800%;
 	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	/* -webkit-background-clip: text;
+	background-clip: text;
 	background-repeat: repeat-x; 
 	background-size: 200% auto;
-  /* color: white !important; */
-	color: transparent ;
+	color: transparent !important ; */
 	animation: moveGradient 5s linear infinite;
+
+	/* text-shadow: 0 0 5px #fff, 0 0 10px #00fff7, 0 0 20px #ff00e0, 0 0 40px #00ff5a; */
+
   
 	/* border-radius: .5em !important; */
   padding: 3px 8px !important;
@@ -117,8 +127,17 @@ b, b span, strong, strong span, em, em span
 
 @keyframes moveGradient {
   0% { background-position: 0% center; }
-  /* 50% { background-position: -100% center; } */
-  100% { background-position: -200% center; }
+  50% { background-position: -100% center; }
+  100% { background-position: 0% center; }
+}
+
+
+*:visited::before {
+	display: inline;
+    padding: 0px 5px;
+    margin-right: 2px;
+    background: gray;
+	content: "* ";
 }
 
 
@@ -132,7 +151,10 @@ b, b span, strong, strong span, em, em span
 
 /********medium.com************/
 
-div .fc {
+div .fc
+, .hc
+, .hb
+{
   max-width: 100vh !important;
 }
 
@@ -153,6 +175,9 @@ box-sizing: content-box;
 /* overflow: visible; */
 
 }
+
+
+
 
 
 @-moz-document domain(confluence.pathology.health.nsw.gov.au) {
@@ -190,6 +215,10 @@ box-sizing: content-box;
     font-family: 'Lilita One', "MartianMono NFM"
 
   }
+
+  
+
+
   h1::before{
     content: "H1";
   }
